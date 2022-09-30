@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'stores' , component: StoreComponent},
+  { path: 'store' , component: StoreComponent},
   { path: 'home' , component: HomeComponent},
   { path: '**' , component: PagenotfoundComponent}
 
