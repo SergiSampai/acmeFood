@@ -1,11 +1,12 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ServiceComponent } from './service/service.component';
+import { DataService } from './service/data.service';
 import { StoreComponent } from './store/store.component';
 import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
@@ -19,7 +20,6 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ServiceComponent,
     StoreComponent,
     ProductComponent,
     LoginComponent,
@@ -30,9 +30,10 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
