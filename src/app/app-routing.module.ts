@@ -1,3 +1,4 @@
+import { HeaderComponent } from './header/header.component';
 import { StoreComponent } from './store/store.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
@@ -20,4 +21,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents =[StoreComponent,HomeComponent,CatalogComponent,PagenotfoundComponent]
+export const routingComponents =[StoreComponent,HomeComponent,CatalogComponent,PagenotfoundComponent,HeaderComponent]
