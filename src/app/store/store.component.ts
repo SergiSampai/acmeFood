@@ -1,3 +1,4 @@
+import { StoresService } from './../service/stores.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoreComponent implements OnInit {
 
-  constructor() { }
+  stores:any =[];
 
-  ngOnInit(): void {
+  constructor(private service:StoresService) { }
+
+  ngOnInit() {
+    this.service.getStores()
+    .subscribe(response =>{
+      this.stores = response;
+    })
   }
 
 }
