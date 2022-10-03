@@ -9,7 +9,7 @@
     <p class="font-italic text-muted mb-4">Order now from our delicious partners below</p>
     <div class="row">
       <div *ngFor="let store of stores" class="col-lg-6 mb-3 mb-lg-0">
-        <div class="hover hover-1 text-white rounded" routerLink="/home">
+        <div class="hover hover-1 text-white rounded" routerLink="/stores/catalog/">
           <img src="{{store.imgUrl}}" alt="stores logo">
           <div class="hover-overlay"></div>
           <div class="hover-1-content px-5 py-4">
