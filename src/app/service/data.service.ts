@@ -18,7 +18,11 @@ export class DataService {
     return this.http.get<ApiResponse<Store>>(this.baseUrl + '/stores');
   }
 
-  getCatalog(storeId:String): Observable<ApiResponse<Store>> {
-    return this.http.get<ApiResponse<Store>>(this.baseUrl + '/stores/catalog/?id=' + storeId);
+  getCatalog(id:any){
+    return this.http.get(this.baseUrl + '/catalog/' + id);
+  }
+
+  searchStores(name:any){
+    
   }
 }
