@@ -14,6 +14,8 @@ import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { CatalogComponent } from './catalog/catalog.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     LoginComponent,
     HomeComponent,
     CartComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule,
