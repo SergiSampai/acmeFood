@@ -14,11 +14,16 @@ export class DataService {
 
   baseUrl: String = 'http://localhost:8080';
 
+
   getStores(): Observable<ApiResponse<Store>> {
     return this.http.get<ApiResponse<Store>>(this.baseUrl + '/stores');
   }
 
-  getCatalog(storeId:String): Observable<ApiResponse<Store>> {
-    return this.http.get<ApiResponse<Store>>(this.baseUrl + '/stores/catalog/?id=' + storeId);
+  getCatalog(id: any){
+    return this.http.get('http://localhost:8080/stores/catalog/'+ id)
+  }
+
+  searchStores(name:any){
+    return this.http.get('http://localhost:8080/stores/searchName/' + name)
   }
 }
