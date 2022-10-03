@@ -2,52 +2,19 @@
   <header class="text-center">
     <h1 class="display-4 font-weight-bold">Acme Food Delivery</h1>
     <p class="font-italic text-muted mb-0">Are you hungry yet?</p>
-    <!-- <p class="font-italic">Snippet By <a href="https://bootstrapious.com" class="text-muted">
-        <u>Bootstrapious</u></a>
-    </p> -->
   </header>
 
   <div class="py-5">
     <h3 class="font-weight-bold mb-0"> Acme Stores</h3>
     <p class="font-italic text-muted mb-4">Order now from our delicious partners below</p>
     <div class="row">
-      <!-- Store 1-->
-      <div class="col-lg-6 mb-3 mb-lg-0">
-        <div class="hover hover-1 text-white rounded"><img src="https://imageproxy.wolt.com/venue/5ec5163790d38c5d6404f948/04572dca-e736-11ec-992e-ce8fb7af3203_burger_house.png" alt="">
+      <div *ngFor="let store of stores" class="col-lg-6 mb-3 mb-lg-0">
+        <div class="hover hover-1 text-white rounded" routerLink="/home">
+          <img src="{{store.imgUrl}}" alt="stores logo">
           <div class="hover-overlay"></div>
           <div class="hover-1-content px-5 py-4">
-            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">American Burger </span>House</h3>
-            <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Store 2-->
-      <div class="col-lg-6">
-        <div class="hover hover-1 text-white rounded"><img src="https://media-cdn.tripadvisor.com/media/photo-s/10/00/b6/f6/pizza-good-wine.jpg" alt="">
-          <div class="hover-overlay"></div>
-          <div class="hover-1-content px-5 py-4">
-            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Pizza </span>Tower</h3>
-            <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Store 3 -->
-      <div class="col-lg-6">
-        <div class="hover hover-1 text-white rounded"><img src="https://img.restaurantguru.com/r5a4-Sushi-Store-by-Katsura-sushi-2021-09.jpg" alt="">
-          <div class="hover-overlay"></div>
-          <div class="hover-1-content px-5 py-4">
-            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Sushi </span>Suzzy</h3>
-            <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Store 4 -->
-      <div class="col-lg-6">
-        <div class="hover hover-1 text-white rounded"><img src="https://static.toiimg.com/photo/87282159.cms" alt="">
-          <div class="hover-overlay"></div>
-          <div class="hover-1-content px-5 py-4">
-            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">Eat </span>Hindi</h3>
-            <p class="hover-1-description font-weight-light mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h3 class="hover-1-title text-uppercase font-weight-bold mb-0"> <span class="font-weight-light">{{store.storeName}}</span></h3>
+            <p class="hover-1-description font-weight-bold mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
         </div>
       </div>
