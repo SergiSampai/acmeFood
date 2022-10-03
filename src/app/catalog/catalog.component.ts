@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../service/data.service';
@@ -14,9 +13,9 @@ export class CatalogComponent implements OnInit {
 
 
 
+
   constructor(
-    private route:ActivatedRoute,
-    private dataService:DataService) { }
+    private route:ActivatedRoute, private dataService:DataService) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
