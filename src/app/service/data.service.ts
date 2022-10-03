@@ -17,4 +17,8 @@ export class DataService {
   getStores(): Observable<ApiResponse<Store>> {
     return this.http.get<ApiResponse<Store>>(this.baseUrl + '/stores');
   }
+
+  getCatalog(storeId:String): Observable<ApiResponse<Store>> {
+    return this.http.get<ApiResponse<Store>>(this.baseUrl + '/stores/catalog/?id=' + storeId);
+  }
 }
